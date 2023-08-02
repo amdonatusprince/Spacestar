@@ -9,6 +9,7 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
   midnightTheme,
+  lightTheme
 } from "@rainbow-me/rainbowkit";
 
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
@@ -47,10 +48,23 @@ const wagmiConfig = createConfig({
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider coolMode theme={midnightTheme()} chains={chains}></RainbowKitProvider>
+      <RainbowKitProvider 
+      // coolMode theme={midnightTheme()} 
+      theme={lightTheme({
+        accentColor: '#1570ef',
+        accentColorForeground: 'white',
+        borderRadius: 'small',
+        fontStack: 'system',
+        overlayBlur: 'small',
+        body: 'Arial'
+      },
+      )}
+      chains={chains}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </WagmiConfig>
+      </RainbowKitProvider>
+      </WagmiConfig>
+
   </React.StrictMode>,
 );

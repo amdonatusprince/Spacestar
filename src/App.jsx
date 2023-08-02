@@ -3,6 +3,8 @@ import ComingSoon from './pages/ComingSoon/ComingSoon';
 import Navroutes from './components/NavRoutes/Navroutes';
 import Soon from '../src//pages/Soon/Soon';
 
+
+
 function App() {
   return (
     <>
