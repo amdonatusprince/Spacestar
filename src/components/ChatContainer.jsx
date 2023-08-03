@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import SearchRooms from './SearchRooms';
 import { useChat } from '../context/ChatProvider';
 import { Description } from '../styled/Description';
+import { LoginButton } from '../connect-wallet/connectButton';
 
 const ChatAppContainer = styled.div`
     --vertical-padding: 3vh;
@@ -16,7 +17,7 @@ const ChatAppContainer = styled.div`
     height: 80vh;
     width: 80vw;
     justify-content: space-between;
-    background: #e5e7e8;
+    background: #194185;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
                 rgba(0, 0, 0, 0.12) 0px -12px 30px,
                 rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -95,6 +96,7 @@ const ChatContainer = () => {
 
     return (
         <ChatAppContainer>
+            
             <Navigation openRoomNav={ () => setIsNavOpen(true) } />
 
             <CenterContainer>

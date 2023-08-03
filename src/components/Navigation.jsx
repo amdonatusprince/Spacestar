@@ -1,10 +1,20 @@
 import React from 'react';
 import { GiExitDoor } from "react-icons/gi"
-import { AiFillHome, AiFillWechat } from "react-icons/ai"
+import { 
+    AiFillHome, 
+    AiFillWechat, 
+    AiFillMoneyCollect 
+} from "react-icons/ai"   
+
+import { 
+    BiBitcoin 
+} from "react-icons/bi" 
+
 import styled from 'styled-components';
 import { ButtonContainer } from '../styled/Button';
 import useChatActions from '../hooks/useChatActions';
 import { useChat } from '../context/ChatProvider';
+import { LoginButton } from '../connect-wallet/connectButton';
 
 const Nav = styled.nav`
     display: flex;
@@ -13,7 +23,7 @@ const Nav = styled.nav`
     align-items: center;
     flex-direction: column;
     padding: 6vh 5px;
-    background: #1a1a1a;
+    background: #ebe8e8;
     
     & div {
         justify-content: center;
@@ -37,26 +47,38 @@ const Navigation = ({ openRoomNav }) => {
     }
 
     return (
+       
+        
         <Nav>
-            <ButtonContainer active={ true }>
-                    <a href="#">
+            <ButtonContainer active={true} >
+                    <a href="/">
                         <AiFillHome size='100%' />
                     </a>
             </ButtonContainer>
+            <p><b>Home</b></p>
 
 
             <ButtonContainer device='mobile' onClick={ openRoomNav }>
-                <a href='#'>
+                <a href='/'>
                     <AiFillWechat size='100%' />
                 </a>
             </ButtonContainer>
+
+
+            <ButtonContainer active={true}>
+                    <a href="#">
+                        <BiBitcoin  size='100%' />
+                    </a>
+            </ButtonContainer>
+            <p><b>Claim </b></p>
     
 
-            <ButtonContainer onClick={ leaveClickHandler }>
+            <ButtonContainer active={true}  onClick={ leaveClickHandler }>
                     <a href="#">
                         <GiExitDoor size='100%' />
                     </a>
             </ButtonContainer>
+            <p><b>Exit Room</b></p>
 
         </Nav>
     );

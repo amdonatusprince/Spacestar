@@ -31,7 +31,7 @@ export const ButtonContainer = styled.div`
     }
     
     & svg {
-        fill: ${ props => props.active ? '#fff' : '#737373'};
+        fill: ${ props => props.active ? '#194185' : '#737373'};
         transition: .3s ease-in-out all;
     }
     
@@ -42,6 +42,6 @@ export const ButtonContainer = styled.div`
     }
 
     & a:hover svg {
-        fill: #fff;
+        fill: #3C95F4;
     }
 `;

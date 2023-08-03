@@ -37,7 +37,7 @@ const ChatForm = () => {
         inputRef.current.focus();
       };
       
-
+// console.log(currentRoom.name)
     return (
         <MessageForm onSubmit={ onSubmit }>
             <input type="text" placeholder='Type a message here' ref={ inputRef }/>

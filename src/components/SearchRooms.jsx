@@ -2,6 +2,7 @@ import React from 'react';
 import { BiReset } from 'react-icons/bi';
 import styled from 'styled-components';
 import { ButtonContainer } from '../styled/Button';
+import { LoginButton } from '../connect-wallet/connectButton';
 
 const SearchRoomsContainer = styled.div`
     display: flex;
@@ -21,14 +22,22 @@ const SearchRoomsContainer = styled.div`
     }
 `;
 
+const RightAlignedDiv = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+`;
+
 const SearchRooms = ({ query, setQuery }) => { 
     return (
+        
         <SearchRoomsContainer>
+
             <input type="text" placeholder='Search Group' value={ query } onChange={(e) => setQuery(e.target.value) } />
             
             <ButtonContainer padding="0" active={ true } size="3em" borderRadius="1.1em">
                 <a href='#'>
-                    <BiReset fill='#fff' size={ '1.5em' }></BiReset>
+                    <BiReset fill='194185' size={ '1.5em' }></BiReset>
                 </a>
             </ButtonContainer>
         </SearchRoomsContainer>

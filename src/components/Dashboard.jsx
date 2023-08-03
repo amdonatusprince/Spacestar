@@ -1,15 +1,15 @@
 import React from 'react';
-
 import styled, { createGlobalStyle } from 'styled-components';
 import { ChatProvider } from '../context/ChatProvider';
 import Wrapper from './Wrapper';
+import { LoginButton } from '../connect-wallet/connectButton';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --main-color-dark-palette: #1a1a1a;
+    --main-color-dark-palette: ##194185;
     --secondry-color-dark-palette: #373737;
-    --blue-button-color: #3c95f4;
-    --blue-active-color: #2070c6;
+    --blue-button-color: ##194185;
+    --blue-active-color: ##194185;
     --blue-gradient: linear-gradient(90deg, #3c95f4 65%, #3385dc 100%);
   }
 
@@ -63,6 +63,7 @@ function Dashboard() {
       <GlobalStyle />
       
       <Background />
+      {/* <div><LoginButton /></div> */}
 
       <ChatProvider>  
         <Wrapper />

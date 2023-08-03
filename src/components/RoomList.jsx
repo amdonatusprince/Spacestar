@@ -76,52 +76,46 @@ const RoomItem = styled.li`
 const rooms = [
     {
         id: 1,
-        name: 'Dog Lovers 🐶',
+        name: 'Breaking Free from Abuse',
         src: './rooms-images/dog-lovers.jpg',
-        description: 'A community for dog lovers to share information, photos, experiences, and support each other.'
+        description: 'A safe space to share experiences, resources, and strategies for breaking free from abusive situations and seeking help.'
     },
 
     {
         id: 2,
-        name: 'Developers 💻',
+        name: 'Hope & Healing Hub',
         src: './rooms-images/developers.jpeg',
-        description: 'Community for developers, we help each other.'
+        description: 'Fostering hope and healing, offering encouragement, coping strategies and breaking mental health stigmas'
     },
     
     {
         id: 3,
-        name: 'Foodies 🍕',
+        name: 'Path to Recovery',
         src: './rooms-images/foodies.png',
-        description: 'A community of people who have a passion for food and love to explore new culinary experiences.'
+        description: 'Community offering hope, understanding, and support for addiction recovery journeys.'
     },
 
     {
         id: 4,
-        name: 'Bookworms 📚',
+        name: 'Empowerment Circle',
         src: './rooms-images/bookworms.png',
-        description: 'Those who love to read and immerse themselves in books, and often discuss and share their favorite stories with others'
+        description: ' Sharing stories of triumph, motivating others to take control of their mental health journey.'
     },
 
     {
         id: 5,
-        name: 'Movie Buffs 🎬',
+        name: 'Wellness Warriors',
         src: './rooms-images/movie-buffs.jpg',
-        description: 'A group of individuals who love to engage in outdoor activities such as hiking, camping, and rock climbing'
+        description: 'A community committed to self-improvement, exploring wellness techniques for a healthy lifestyle.'
     },
 
     {
         id: 6,
-        name: 'DIYers 🙌',
+        name: 'Inner Strength Sanctuary',
         src: './rooms-images/diyers.jpg',
-        description: ' People who like to take on home improvement and craft projects, and enjoy working with their hands to create something new and unique'
+        description: "Building resilience, offering emotional support and self-reflection to face life's challenges."
     },
 
-    {
-        id: 7,
-        name: 'Fitness Enthusiasts 💪🏽',
-        src: './rooms-images/fitness.jpg',
-        description: 'Individuals who have a love for films and enjoy watching and discussing different genres, styles, and storylines.'
-    }
 ];
 
 const RoomList = ({ query, isNavOpen, setIsNavOpen }) => {
@@ -161,7 +155,7 @@ const RoomList = ({ query, isNavOpen, setIsNavOpen }) => {
 
     return (
         <RoomListContainer open={ isNavOpen }>
-            <h3>Rooms</h3>
+            <h3><b>Help Rooms</b></h3>
 
             <ul>
                 {   

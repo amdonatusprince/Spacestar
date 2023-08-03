@@ -3,8 +3,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import Why from '../../components/Why/Why';
 import GetStarted from '../../components/GetStarted/GetStarted';
 import Footer from '../../components/Footer/Footer';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 
 const Home = () => {
   return (
