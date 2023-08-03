@@ -40,7 +40,7 @@ const ChatForm = () => {
 // console.log(currentRoom.name)
     return (
         <MessageForm onSubmit={ onSubmit }>
-            <input type="text" placeholder='Type a message here' ref={ inputRef }/>
+            <input type="text" placeholder='Share your Story or Contribute here' ref={ inputRef }/>
             
             <ButtonContainer flex="0" padding="0" active={ true } size="2.2em" borderRadius="50%">
                 <button onClick={onSubmit}>

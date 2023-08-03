@@ -47,7 +47,7 @@ const Why = () => {
                 <Button content='Launch dApp' />
               </Link>
             ) : (
-              <LoginButton />
+              <LoginButton label={"Get Started"}/>
             )}
       </div>
     </div>

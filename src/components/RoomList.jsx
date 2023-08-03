@@ -77,42 +77,42 @@ const rooms = [
     {
         id: 1,
         name: 'Breaking Free from Abuse',
-        src: './rooms-images/dog-lovers.jpg',
+        src: './rooms-images/Breaking Free from Abuse.jpg',
         description: 'A safe space to share experiences, resources, and strategies for breaking free from abusive situations and seeking help.'
     },
 
     {
         id: 2,
         name: 'Hope & Healing Hub',
-        src: './rooms-images/developers.jpeg',
+        src: './rooms-images/Hope & Healing Hub.jpg',
         description: 'Fostering hope and healing, offering encouragement, coping strategies and breaking mental health stigmas'
     },
     
     {
         id: 3,
         name: 'Path to Recovery',
-        src: './rooms-images/foodies.png',
+        src: './rooms-images/Path to Recovery.jpg',
         description: 'Community offering hope, understanding, and support for addiction recovery journeys.'
     },
 
     {
         id: 4,
         name: 'Empowerment Circle',
-        src: './rooms-images/bookworms.png',
+        src: './rooms-images/Empowerment Circle.jpg',
         description: ' Sharing stories of triumph, motivating others to take control of their mental health journey.'
     },
 
     {
         id: 5,
         name: 'Wellness Warriors',
-        src: './rooms-images/movie-buffs.jpg',
+        src: './rooms-images/Wellness Warriors.jpg',
         description: 'A community committed to self-improvement, exploring wellness techniques for a healthy lifestyle.'
     },
 
     {
         id: 6,
         name: 'Inner Strength Sanctuary',
-        src: './rooms-images/diyers.jpg',
+        src: './rooms-images/Inner Strength Sanctuary.jpg',
         description: "Building resilience, offering emotional support and self-reflection to face life's challenges."
     },
 
