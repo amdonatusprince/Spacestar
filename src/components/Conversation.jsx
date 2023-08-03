@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { getFirstLetter } from '../helpers';
+import { getFirstLetter } from '../helper';
 import useMessages from '../hooks/useMessages';
 import { useChat } from '../context/ChatProvider';
 

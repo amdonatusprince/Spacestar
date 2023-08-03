@@ -7,9 +7,11 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import { LoginButton } from '../../connect-wallet/connectButton'
+import { useAccount } from 'wagmi';
 
 const Footer = () => {
+    const { address, isConnected } = useAccount();
   return (
     <>
     <div className={design.footercontainer}>
@@ -21,9 +23,13 @@ const Footer = () => {
                 <p>
                     Start connecting today
                 </p>
-                <Link to='/soon'>
-                <Button content='Get Started'/>
-                </Link>
+                {isConnected ? (
+              <Link to='/dashboard'>
+                <Button content='Launch dApp' />
+              </Link>
+            ) : (
+              <LoginButton />
+            )}
             </div>
         </div>
 

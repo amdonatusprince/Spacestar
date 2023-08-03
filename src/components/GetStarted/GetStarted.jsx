@@ -3,8 +3,11 @@ import design from './getStarted.module.css'
 import img from '../../assets/getstartedimg.png'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
+import { LoginButton } from '../../connect-wallet/connectButton'
+import { useAccount } from 'wagmi';
 
 const GetStarted = () => {
+    const { address, isConnected } = useAccount();
   return (
     <>
     <div className={design.getstarted}>
@@ -61,10 +64,13 @@ const GetStarted = () => {
             <p>
             Start connecting and sharing your thoughts while earning incentives. Claim and stake your rewards for more rewards.
             </p>
-
-            <Link to='/soon'> 
-                <Button content='Get started' />
-            </Link>
+            {isConnected ? (
+              <Link to='/dashboard'>
+                <Button content='Launch dApp' />
+              </Link>
+            ) : (
+              <LoginButton />
+            )}
         </div>
         <div className={design.getstartedimg}>
             <img src={img} alt=""  />

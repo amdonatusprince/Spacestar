@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import design from './why.module.css';
 import Button from '../Button/Button';
 import Green from '../../assets/green.png';
@@ -5,8 +6,13 @@ import Blue from '../../assets/blue.png';
 import Orange from '../../assets/orange.png';
 import Purple from '../../assets/purple.png';
 import { Link } from 'react-router-dom';
+import { useAccount } from 'wagmi';
+import { LoginButton } from '../../connect-wallet/connectButton';
 
 const Why = () => {
+
+  const { address, isConnected } = useAccount();
+
   return (
     <div className={design.Why}>
       <div className={design.Why_cards}>
@@ -36,9 +42,13 @@ const Why = () => {
         Earn reward tokens by actively participating and engaging with others. 
         Share, seek advice, and receive uplifting feedback from caring members.
         </p>
-        <Link to='/soon'> 
-        <Button content='Get started' />
-        </Link>
+        {isConnected ? (
+              <Link to='/dashboard'>
+                <Button content='Launch dApp' />
+              </Link>
+            ) : (
+              <LoginButton />
+            )}
       </div>
     </div>
   );
