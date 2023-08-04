@@ -106,7 +106,8 @@ const ChatContainer = () => {
                     {
                         ! currentRoom ? 
                         
-                        <WelcomeMessage>Come join the fun! <br/> Chat with friends or meet new ones in one of our lively chat rooms.<br/> See you there! 🙋🏽‍♂️</WelcomeMessage>
+                        <WelcomeMessage>Come join the fun! <br/> <br/> Share your thoughts, emotions, and experiences, <br/> knowing that you are not alone.
+                        <br/> <br/> See you inside! 🙋🏽‍♂️</WelcomeMessage>
                         :
                         <>
                             <Header>

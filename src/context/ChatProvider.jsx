@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import io from 'socket.io-client';
 
-const socket = io.connect(import.meta.env.REACT_APP_SERVER);
 const ChatContext = createContext();
 
 export const useChat = () => {
@@ -12,9 +10,8 @@ export const ChatProvider = ({ children }) => {
     const [userName, setUserName] = useState('');
     const [currentRoom, setCurrentRoom] = useState(null);
     const [messages, setMessages] = useState('')
-    
+
     const value = {
-        socket,
         userName,
         setUserName,
         setCurrentRoom,
@@ -23,7 +20,6 @@ export const ChatProvider = ({ children }) => {
     
     return (
         <ChatContext.Provider value={ value }>
-            
             { children }
         </ChatContext.Provider>
     );

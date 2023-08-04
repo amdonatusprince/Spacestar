@@ -13,7 +13,7 @@ import {
 } from "@rainbow-me/rainbowkit";
 
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { polygonMumbai, celoAlfajores} from "wagmi/chains";
+import { celoAlfajores} from "wagmi/chains";
 import { jsonRpcProvider } from '@wagmi/core/providers/jsonRpc'
 
 //style import
@@ -22,11 +22,11 @@ import "@rainbow-me/rainbowkit/styles.css";
 
 //wagmi
 const { chains, publicClient } = configureChains(
-  [polygonMumbai, celoAlfajores],
+  [celoAlfajores],
   [
     jsonRpcProvider({
-      rpc: (polygonMumbai, celoAlfajores) => ({
-        http: import.meta.env.VITE_CHAINSTACK_NODE_RPC_ENDPOINT,
+      rpc: (celoAlfajores) => ({
+        http: import.meta.env.VITE_CELO_RPC_ENDPOINT,
       }),
     }),
   ],

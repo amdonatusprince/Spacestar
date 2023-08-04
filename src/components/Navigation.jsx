@@ -9,10 +9,8 @@ import {
 import { 
     BiBitcoin 
 } from "react-icons/bi" 
-
 import styled from 'styled-components';
 import { ButtonContainer } from '../styled/Button';
-import useChatActions from '../hooks/useChatActions';
 import { useChat } from '../context/ChatProvider';
 import { LoginButton } from '../connect-wallet/connectButton';
 
@@ -38,12 +36,10 @@ const Nav = styled.nav`
 `;
 
 const Navigation = ({ openRoomNav }) => {
-    const { leaveRoom } = useChatActions();
     const { currentRoom, setCurrentRoom } = useChat();
 
     const leaveClickHandler = () => {
         setCurrentRoom(null);
-        leaveRoom(currentRoom.id);
     }
 
     return (

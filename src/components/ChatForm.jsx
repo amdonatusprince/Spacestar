@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { IoIosSend } from 'react-icons/io'
 import { ButtonContainer } from '../styled/Button';
-import useChatActions from '../hooks/useChatActions';
 import { useChat } from '../context/ChatProvider';
 
 const MessageForm = styled.form`
@@ -23,21 +22,18 @@ const MessageForm = styled.form`
 
 const ChatForm = () => {
     const inputRef = useRef(null);
-    const { sendMessage } = useChatActions();
     const { currentRoom, userName } = useChat();
 
     const onSubmit = (e) => {
         e.preventDefault();
       
         const message = inputRef.current.value; 
-        // console.log('Message to be sent:', message); 
         sendMessage(message, currentRoom.id, userName);
 
         inputRef.current.value = '';
         inputRef.current.focus();
       };
       
-// console.log(currentRoom.name)
     return (
         <MessageForm onSubmit={ onSubmit }>
             <input type="text" placeholder='Share your Story or Contribute here' ref={ inputRef }/>

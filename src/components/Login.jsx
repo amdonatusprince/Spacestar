@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useChat } from '../context/ChatProvider';
+import { useAccount } from 'wagmi';
 
 const LoginContainer = styled.form`
     display: flex;
@@ -49,24 +50,15 @@ const Input = styled.input.attrs(props => ({
 `;
 
 const Login = () => {
-    const inputRef = useRef(null);
     const { setUserName } = useChat();
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        
-        setUserName(inputRef.current.value);
-    }
+    const { address, isConnected } = useAccount();
+    const formattedUserName = address.slice(0, 3) + '...' + address.slice(-5);
 
-    return (
-        <LoginContainer onSubmit={ handleSubmit }>
-            <Input type="text" placeholder="Enter a username" ref={ inputRef } />
-            
-            <button>
-                <AiOutlineArrowRight color='#fff' size="1.2em" />
-            </button>
-        </LoginContainer>
-    );
+    useEffect(() => {
+        setUserName(formattedUserName); 
+    }, [setUserName, formattedUserName]);
+
+    return null; 
 };
-
 export default Login;

@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { useChat } from '../context/ChatProvider';
-import useChatActions from '../hooks/useChatActions';
 import useDebounce from '../hooks/useDebounce';
 import { Description } from '../styled/Description';
 
@@ -120,7 +119,6 @@ const rooms = [
 
 const RoomList = ({ query, isNavOpen, setIsNavOpen }) => {
     const debouncedSearch = useDebounce(query, 350);
-    const { joinRoom } = useChatActions();
     const { currentRoom, setCurrentRoom, userName } = useChat();
 
 
@@ -146,8 +144,6 @@ const RoomList = ({ query, isNavOpen, setIsNavOpen }) => {
 
         const selectedRoom = rooms.find(room => room.id === roomID);
         setCurrentRoom(selectedRoom);
-
-        joinRoom({ roomID, userName });
 
         setIsNavOpen(false);
     }
