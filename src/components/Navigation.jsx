@@ -62,7 +62,7 @@ const Navigation = ({ openRoomNav }) => {
 
 
             <ButtonContainer active={true}>
-                    <a href="#">
+                    <a href="/claim">
                         <BiBitcoin  size='100%' />
                     </a>
             </ButtonContainer>

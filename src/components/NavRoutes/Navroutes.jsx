@@ -4,6 +4,7 @@ import Home from '../../pages/Home/Home';
 import Soon from '../../pages/Soon/Soon'
 import Dashboard from '../Dashboard';
 import Navbar from '../Navbar/Navbar';
+import Commingsoon from '../ComingSoon/ComingSoon';
 
 
 const Navroutes = () => {
@@ -13,6 +14,7 @@ const Navroutes = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='soon' element={<Soon/>}/>
         <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/claim' element={<Commingsoon />} />
         {/* <Route path='/navbar' element={<Navbar/>} /> */}
         {/* <Route path='comingsoon2' element={<ComingSoon/>}/> */}
     </Routes>
