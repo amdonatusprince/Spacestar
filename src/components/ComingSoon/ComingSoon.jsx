@@ -1,5 +1,5 @@
 import React from 'react'
-import comingsoon from '../../assets/comingsoon.png'
+import claimPoints from '../../assets/claimPoints.png'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
 import './ComingSoon.module.css'
@@ -26,15 +26,15 @@ const Commingsoon = () => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
       }}>
-      {/* <div className='commingsoon-container'>
-        <img src={comingsoon} 
-        alt="Coming soon page image" 
+      <div className='commingsoon-container'>
+        <img src={claimPoints} 
+        alt="Claim Point image" 
         style={{
-            width: '30%',
+            width: '60%',
           }}
           />
-      </div> */}
-      <h3 style={{marginBottom: '20px'}}>
+      </div>
+      <h3 style={{marginBottom: '20px', marginTop: '-70px'}}>
         Congratulation!!! You've earned: <b>{Number(data)}</b> Spacestar Points
       </h3>
       <p style={{marginBottom: '20px'}}>
